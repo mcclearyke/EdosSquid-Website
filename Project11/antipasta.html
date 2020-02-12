@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Edo's Squid</title>
+    <!-- Responsive Text -->
+    <meta name="description" content="Don't forget to add a 1-2 sentence description here.">
+    <meta name="keywords" content="Don't forget to add 20-30 important keywords here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+       <link href="css/style.css" rel="stylesheet" type="text/css">
+               <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+  <style>
+
+    body {
+      margin: 0px;
+    }
+
+    /* Grid Start */
+    .item1 { grid-area: header; }
+    .item3 { grid-area: antipasta; }
+    .item4 { grid-area: footer; }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header header header header header'
+        'antipasta   antipasta    antipasta  antipasta    antipasta  antipasta '
+        'antipasta   antipasta    antipasta  antipasta    antipasta  antipasta '
+        'footer footer footer footer footer footer';
+       grid-gap: 10px;
+      background-color: #white;
+      padding: 10px;
+    }
+
+    .grid-container > div {
+      text-align: left;
+      /* padding: 20px 0; */
+      font-size: 30px;
+    }
+
+    @media screen and (max-width:550px){
+      .grid-container {
+        grid-template-areas:
+        'header'
+        'antipasta'
+        'footer';
+      }
+    }
+    /* Grid End */
+
+  /* Header CSS Starts */
+  .topnav{
+    background-color: white;
+  }
+  .topnav a{
+    color: black;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative;
+      height: 155px;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+    }
+    .topnav.responsive a {
+      float: left;
+      display: block;
+      text-align: center;
+    }
+  }
+  /* Header CSS Ends */
+
+  p, h2, h3, h4 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size; 36px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .item4 p, .item4 a {
+    color: #ebe9e7;
+  }
+
+  .fixed {
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  }
+
+  #book a:hover {
+    -webkit-text-stroke: 0.3px black;
+    color: white;
+  }
+  </style>
+</head>
+
+<body>
+<div class="grid-container">
+
+<!-- Header -->
+
+<!-- <header> -->
+<div class="item1">
+  <div id="header">
+  <a href="index.html">
+     <img src = "whiteLogo.jpg"></a>
+
+  <div class="topnav" id="myTopnav">
+
+    <div id="menu">
+      <a href="menu.html">Menu</a>
+    </div>
+
+  <div id="book">
+    <a href="http://edossquid.four-food.com/?fbclid=IwAR2R63BsM5DYJx8QqeZMqiacMcRNKzJSgzDesAl4pgkURHDTniAAp1-KeSo#" target="_blank">Book</a>
+  </div>
+
+  <div id="contact">
+    <a href="mailto: graycat68@hotmail.com">Contact</a>
+  </div>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+  <br>
+</div>
+<!-- </header> -->
+
+  <!-- For the antipasta -->
+  <div class="item3">
+    <h2> Antipasta </h2>
+
+      <h4> Mussels Marinara ... <em> $10.00 </em></h4>
+
+      <h4> Roasted Red Peppers ... <em> $9.00 </em></h4>
+            <p> with fresh mozzarella or anchovies ... <em>$10.00</em></p>
+
+      <h4> Caponata ... <em> $6.00 </em></h4>
+          <p>Vegetable Stew</p>
+
+      <h4> Broccoletti Di Rapa ... <em> $8.00 </em></h4>
+          <p> with garlic, pine nuts, red pepper </p>
+
+      <h4> Scungilli Insalata ... <em> $8.00 </em></h4>
+          <p> conch with olive oil, lemon, garlic </p>
+
+      <h4> Fried Squid ... <em> $9.00 </em></h4>
+
+      <h4>Squid ... <em> $15.00 </em></h4>
+          <p> with belgian endive nad wild mushrooms </p>
+
+      <h4>Fried Oysters ... <em> $12.00 </em></h4>
+
+      <h3> Soups </h3>
+        <h4> Lentils ... <em> $5.00 </em></h4>
+  </div>
+
+  <!-- Footer -->
+  <div class="item4">
+    <a href="https://www.yelp.com/biz/edos-squid-richmond" target="_blank"> Yelp </a>
+    <p> Phone: (804)864-5488 </p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+   // Hamburger icon
+   function myFunction() {
+     var x = document.getElementById("myTopnav");
+     if (x.className === "topnav") {
+         x.className += " responsive";
+     } else {
+         x.className = "topnav";
+     }
+}
+
+// Sticky Header
+     $(function () {
+
+     createSticky($("#header"));
+
+   });
+
+   function createSticky(sticky) {
+
+     if (typeof sticky !== "undefined") {
+
+       var pos = sticky.offset().top,
+       win = $(window);
+
+       win.on("scroll", function () {
+         win.scrollTop() >= pos ? sticky.addClass("fixed") : sticky.removeClass("fixed");
+       });
+     }
+   }
+</script>
+</body>
+</html>

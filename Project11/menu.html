@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Edo's Squid</title>
+    <!-- Responsive Text -->
+    <meta name="description" content="Don't forget to add a 1-2 sentence description here.">
+    <meta name="keywords" content="Don't forget to add 20-30 important keywords here.">
+       <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <style>
+
+          body {
+            margin: 0px;
+          }
+
+          /* Grid Start */
+          .item1 { grid-area: header; }
+          .item2 { grid-area: pasta; }
+          .item3 { grid-area: antipasta; }
+          .item4 { grid-area: footer; }
+
+          .grid-container {
+            display: grid;
+            grid-template-areas:
+              'header header header header header header'
+              'pasta   pasta    pasta  pasta    pasta  pasta '
+              'antipasta   antipasta    antipasta  antipasta    antipasta  antipasta '
+              'footer footer footer footer footer footer';
+             grid-gap: 0px;
+            background-color: black;
+           padding: 10px;
+           height:100%;
+          }
+
+          .grid-container > div {
+            text-align: left;
+            font-size: 30px;
+          }
+
+          @media screen and (max-width:550px){
+            .grid-container {
+              grid-template-areas:
+              'header'
+              'pasta'
+              'antipasta'
+              'footer';
+            }
+          }
+          /* Grid End */
+
+        .item1, .item4{
+        background-color: black;
+        }
+
+        /* Menu Page CSS Start */
+        .item2 {
+          text-align: center;
+          margin: 0px;
+          padding: 0px ;
+          position: relative;
+          background-color: black;
+        }
+
+          #Pasta1 a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            text-align: center;
+            font-size: 56px;
+            color: white;
+            font-weight: bold;
+            font-family: 'EB Garamond', serif;
+            -webkit-text-stroke: 0.2px #a82118;
+          }
+            #Pasta1 a:hover {
+              color:#a82118;
+              -webkit-text-stroke: 0.3px white;
+              }
+
+        .item3 {
+          text-align: center;
+          margin: 0px;
+          padding: 0px;
+          position: relative;
+          background-color: black;
+        }
+
+          #Antipasta1 a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            text-align: center;
+            font-size: 56px;
+            color: white;
+            font-weight: bold;
+            font-family: 'EB Garamond', serif;
+            -webkit-text-stroke: 0.2px #1c8001;
+          }
+
+          #Antipasta1 a:hover {
+            color:#1c8001;
+            -webkit-text-stroke: 0.2px white;
+            }
+         /* Menu Page End */
+
+        /* Cool picture effects CSS Start */
+        .fade-in {
+          animation: fadeIn ease 6s;
+          -webkit-animation: fadeIn ease 6s;
+          -moz-animation: fadeIn ease 6s;
+          -o-animation: fadeIn ease 6s;
+          -ms-animation: fadeIn ease 6s;
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-moz-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-o-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+
+        @-ms-keyframes fadeIn {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+        /* Cool picture effects CSS End */
+
+        .topnav .icon {
+        display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+        .topnav a {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        }
+
+        @media screen and (max-width: 600px) {
+        .topnav.responsive {
+          position: relative;
+          height: 155px;
+        }
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+        }
+        .topnav.responsive a {
+          float: left;
+          display: block;
+          text-align: center;
+        }
+        }
+        </style>
+
+</head>
+
+<body>
+<div class="grid-container">
+
+<!-- Header -->
+<div class="item1">
+  <a href="index.html">
+     <img src = "Logo.jpg"></a>
+
+  <div class="topnav" id="myTopnav">
+
+    <div id="menu">
+      <a href="menu.html">Menu</a>
+    </div>
+
+  <div id="book">
+    <a href="http://edossquid.four-food.com/?fbclid=IwAR2R63BsM5DYJx8QqeZMqiacMcRNKzJSgzDesAl4pgkURHDTniAAp1-KeSo#" target="_blank">Book</a>
+  </div>
+
+  <div id="contact">
+    <a href="mailto: graycat68@hotmail.com">Contact</a>
+  </div>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <br>
+</div>
+
+  <!-- For the Pasta -->
+  <div class="item2">
+      <div class="fade-in">
+        <img src="img5.jpg" style="width: 100%;">
+      </div>
+      <div id = "Pasta1">
+        <a href="pasta.html">Pasta</a>
+      </div>
+    </div>
+
+  <!-- For the Antiasta -->
+  <div class= "item3">
+    <div class="fade-in">
+      <img src="img4.jpg" style="width: 100%;">
+    </div>
+        <div id = "Antipasta1">
+          <a href="antipasta.html">Antipasta</a>
+        </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="item4">
+    <a href="https://www.yelp.com/biz/edos-squid-richmond" target="_blank"> Yelp </a>
+    <p> Phone: (804)864-5488 </p>
+  </div>
+</div>
+
+<script>
+   // Hamburger icon
+   function myFunction() {
+     var x = document.getElementById("myTopnav");
+     if (x.className === "topnav") {
+         x.className += " responsive";
+     } else {
+         x.className = "topnav";
+     }
+}
+</script>
+</body>
+</html>

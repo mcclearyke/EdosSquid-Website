@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+
+body {
+  margin: 0px;
+}
+
+/* Header CSS Starts */
+.topnav {
+overflow: hidden;
+background-color: black;
+height: 68px;
+padding-bottom: 13px;
+padding-top: 45px;
+margin-left: 0px;
+color: black;
+}
+
+.item1 img {
+  float: left;
+  width: 250px;
+  height: 125px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 46px;
+  text-decoration: none;
+  font-size: 24px;
+  display: inline;
+  font-family: 'EB Garamond', serif;
+}
+
+#menu a:hover {
+  color: #1c8001;
+}
+
+#book a:hover {
+  color: white;
+}
+
+#contact a:hover {
+  color: #a82118;
+}
+
+/* Header CSS Ends */
+.item4 p {
+   margin-top: 8px;
+   margin-bottom: 24px;
+}
+.item4 a{
+  margin-top: 24px;
+}
+  .item4 p, .item4 a {
+    color: #403f3e;
+    text-decoration: none;
+    text-align:center;
+    display: block;
+    font-size: 24px;
+    }

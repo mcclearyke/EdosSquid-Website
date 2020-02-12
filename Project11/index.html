@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edo's Squid</title>
+    <!-- Responsive Text -->
+    <meta name="description" content="Don't forget to add a 1-2 sentence description here.">
+    <meta name="keywords" content="Don't forget to add 20-30 important keywords here.">
+       <link href="css/style.css" rel="stylesheet" type="text/css">
+             <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <style>
+  body {
+    margin: 0px;
+  }
+  /* Grid Start */
+  .item1 { grid-area: header; }
+  .item2 { grid-area: main; }
+  .item6 { grid-area: left; }
+  .item3 { grid-area: right; }
+  .item4 { grid-area: footer; }
+  .item5 { grid-area: slide; }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'slide  slide  slide  slide  slide slide '
+      'main   main   left   left   right  right'
+      'footer footer footer footer footer footer';
+     grid-gap: 0px;
+    background-color: black;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .grid-container > div {
+    text-align: left;
+    font-size: 30px;
+  }
+
+  @media screen and (max-width:550px){
+    .grid-container {
+      grid-template-areas:
+      'header'
+      'slide'
+      'main'
+      'left'
+      'right'
+      'footer';
+    }
+  }
+  /* Grid End */
+
+  /* Slideshow CSS Starts*/
+  .mySlides {
+    display: none;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+  }
+
+  /* Slideshow CSS Ends */
+
+  p, h1, h3 {
+  color: white;
+  }
+
+  h3 {
+  text-align: center;
+  }
+
+  .item6 p, .item3 p, .item4 p {
+    text-align: center;
+  }
+
+  .item1, .item2, .item3, .item4, .item5, .item6 {
+  background-color: black;
+  font-family: 'EB Garamond', serif;
+  }
+
+  .item4 p{
+    color: #403f3e;
+    align-items: center;
+  }
+
+  #map {
+  /* center the map */
+  align-items: center;
+  }
+
+  #hours p {
+  font-size: 30px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+    height: 155px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+  }
+  .topnav.responsive a {
+    float: left;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Logo Creation */
+@font-face {
+    font-family: 'zai_drukarnia_wydawnicza_18Rg';
+    src: url('webfontkit-20200208-114456/zai_drukarniawydawnicza1870-webfont.woff2') format('woff2'),
+         url('webfontkit-20200208-114456/zai_drukarniawydawnicza1870-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Logo {
+  font-family: 'zai_drukarnia_wydawnicza_18Rg';
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.item2,.item6, .item3 {
+  margin-left: 12px;
+  margin-right: 12px;
+
+}
+
+  </style>
+</head>
+
+<body>
+<div class="grid-container">
+
+<!-- Header -->
+<div class="item1">
+  <a href="index.html">
+     <img src = "Logo.jpg"></a>
+
+  <div class="topnav" id="myTopnav">
+
+    <div id="menu">
+      <a href="menu.html">Menu</a>
+    </div>
+
+  <div id="book">
+    <a href="http://edossquid.four-food.com/?fbclid=IwAR2R63BsM5DYJx8QqeZMqiacMcRNKzJSgzDesAl4pgkURHDTniAAp1-KeSo#" target="_blank">Book</a>
+  </div>
+
+  <div id="contact">
+    <a href="mailto: graycat68@hotmail.com">Contact</a>
+  </div>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+  <br>
+</div>
+
+
+<!-- Slideshow -->
+<div class="item5">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%; height: auto;">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img6.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img9.jpg" style="width:100%">
+  </div>
+  <br>
+</div>
+
+<!-- Main -->
+  <div class="item2">
+    <!-- For the Logo -->
+    <div id = "Logo">
+      <h1> Edo's Squid </h1>
+    </div>
+
+    <!-- For the about stuff -->
+    <p> Hello, we are Edo's Squid, an Italian and seafood resturant in the Richmond area. </p>
+  </div>
+
+<!-- Left Side -->
+  <div class="item6" data-aos="fade-down">
+    <div id = "adress">
+      <h3> Where To Find Us</h3>
+        <p> 411 N Harrison St, Richmond, VA 23220</p>
+
+        <!-- Add the Map -->
+        <div id = "map">
+          <p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.19288115283!2d-77.4555040492807!3d37.55051923270408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b1114f5636a517%3A0x4f1e28da167e3fff!2sEdo&#39;s%20Squid!5e0!3m2!1sen!2sus!4v1580522056551!5m2!1sen!2sus"
+              width="500" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="item3">
+    <div id = "hours">
+      <h3> Store Hours </h3>
+        <p>
+          Sunday: 5:30pm - 10:00pm
+        </p>
+        <p>
+          Monday: 11:00am - 10:00pm
+        </p>
+        <p>
+          Tuesday: 11:00am - 10:00pm
+        </p>
+        <p>
+          Wednesday: 11:00am - 10:00pm
+        </p>
+        <p>
+          Thursday: 11:00am - 10:00pm
+        </p>
+        <p>
+          Friday: 11:00am - 10:00pm
+        </p>
+        <p>
+          Saturday: 11:00am - 10:00pm
+        </p>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <div class="item4">
+    <a href="https://www.yelp.com/biz/edos-squid-richmond" target="_blank"> Yelp </a>
+    <p> Phone: (804)864-5488 </p>
+  </div>
+</div>
+
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+   // Hamburger icon
+   function myFunction() {
+     var x = document.getElementById("myTopnav");
+     if (x.className === "topnav") {
+         x.className += " responsive";
+     } else {
+         x.className = "topnav";
+     }
+   }
+
+  //Slideshow
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5500); // Change image every 2 seconds
+  }
+
+</script>
+</body>
+</html>
